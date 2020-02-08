@@ -1,0 +1,27 @@
+{
+  "name": "typescript-template-yarn",
+  "version": "0.0.1",
+  "description": "TypeScript template for Yarn.",
+  "main": "dist/index.js",
+  "repository": "https://github.com/InkoHX/typescript-template-yarn.git",
+  "author": "InkoHX <inkohx@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --ext .ts --ignore-path .gitignore ./src",
+    "lint:fix": "eslint --ext .ts --ignore-path .gitignore ./src --fix",
+    "compile": "tsc -p .",
+    "compile:test": "tsc -p . --noEmit",
+    "watch": "tsc -w -p .",
+    "watch:test": "tsc -w -p . --noEmit"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "@inkohx/eslint-config-codestyle": "^1.2.0",
+    "@types/node": "^13.7.0",
+    "@typescript-eslint/eslint-plugin": "^2.19.0",
+    "@typescript-eslint/parser": "^2.19.0",
+    "eslint": "^6.8.0",
+    "typescript": "^3.7.5"
+  }
+}
