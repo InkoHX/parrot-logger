@@ -1,6 +1,6 @@
 {
   "name": "parrot-logger",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Console utility.",
   "main": "dist/index.js",
   "repository": "https://github.com/InkoHX/typescript-template-yarn.git",
