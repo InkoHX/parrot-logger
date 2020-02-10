@@ -2,9 +2,9 @@
   align="center"
 >
 
-# Project Name
+# Parrot Logger
 
-![LICENCE](https://img.shields.io/github/license/InkoHX/project-name?label=LICENCE&style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/InkoHX/project-name)
+![LICENCE](https://img.shields.io/github/license/InkoHX/logger-renew?label=LICENCE&style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/InkoHX/logger-renew)
 
 </div>
