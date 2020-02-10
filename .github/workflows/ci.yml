@@ -59,5 +59,7 @@ jobs:
             ${{ runner.os }}-node-yarn-
       - name: Compile source code.
         run: yarn --frozen-lockfile
-      - name: Publish package
+      - name: Publish package.
         run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
