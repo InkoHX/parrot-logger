@@ -16,14 +16,14 @@ export interface ColorOptions {
 
 export interface ConsoleOptions {
   logging?: boolean,
-  type?: LoggerType[],
+  type?: Record<LoggerType, boolean>,
   color: Record<LoggerType, ColorOptions>
 }
 
 export interface FileLogging {
   logging?: boolean,
   filePath?: string,
-  type?: LoggerType[]
+  type?: Record<LoggerType, boolean>
 }
 
 export interface LoggerOptions {
@@ -36,7 +36,12 @@ const defaultOptions: DeepRequired<LoggerOptions> = {
   timestamp: 'YYYY/MM/DD HH:mm:ss:SSS',
   console: {
     logging: true,
-    type: [],
+    type: {
+      INFO: true,
+      WARN: true,
+      ERROR: true,
+      DEBUG: false
+    },
     color: {
       INFO: {
         text: '#fff',
@@ -59,7 +64,12 @@ const defaultOptions: DeepRequired<LoggerOptions> = {
   file: {
     logging: false,
     filePath: path.join(path.resolve(process.cwd()), 'program.log'),
-    type: []
+    type: {
+      INFO: true,
+      WARN: true,
+      ERROR: true,
+      DEBUG: true
+    }
   }
 }
 
@@ -95,11 +105,11 @@ export default class Logger {
   private write (type: LoggerType, data: any): Logger {
     const timestamp = dayjs().format(this.options.timestamp)
 
-    if (this.options.console.logging && this.options.console.type.includes(type)) {
+    if (this.options.console.logging && this.options.console.type[type]) {
       console.log(this.formatData(timestamp, this.flatten(data), this.options.console.color[type], this.isObject(data)))
     }
 
-    if (this.options.file.logging && this.options.file.type.includes(type) && this.writeStream) {
+    if (this.options.file.logging && this.options.file.type[type] && this.writeStream) {
       this.writeStream.write(`[${timestamp}] [${type}] ${this.flatten(data, false) + EOL || '\n'}`, error => {
         if (error) console.error(error)
       })
