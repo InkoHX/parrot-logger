@@ -2,7 +2,7 @@
   align="center"
 >
 
-# Parrot Logger
+![ParrotLogger](https://github.com/InkoHX/parrot-logger/blob/master/media/ParrotLogger.png?raw=true)
 
 ![CI](https://github.com/InkoHX/parrot-logger/workflows/CI/badge.svg)
 ![LICENCE](https://img.shields.io/github/license/InkoHX/logger-renew?label=LICENCE&style=flat-square)
