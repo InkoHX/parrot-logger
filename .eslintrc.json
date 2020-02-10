@@ -10,5 +10,8 @@
   "plugins": [
     "@typescript-eslint"
   ],
-  "extends": "@inkohx/eslint-config-codestyle/typescript"
+  "extends": "@inkohx/eslint-config-codestyle/typescript",
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off"
+  }
 }

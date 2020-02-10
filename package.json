@@ -1,7 +1,7 @@
 {
-  "name": "typescript-template-yarn",
+  "name": "parrot-logger",
   "version": "0.0.1",
-  "description": "TypeScript template for Yarn.",
+  "description": "Console utility.",
   "main": "dist/index.js",
   "repository": "https://github.com/InkoHX/typescript-template-yarn.git",
   "author": "InkoHX <inkohx@gmail.com>",
@@ -14,7 +14,12 @@
     "watch": "tsc -w -p .",
     "watch:test": "tsc -w -p . --noEmit"
   },
-  "dependencies": {},
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "dayjs": "^1.8.20",
+    "deepmerge": "^4.2.2",
+    "utility-types": "^3.10.0"
+  },
   "peerDependencies": {},
   "devDependencies": {
     "@inkohx/eslint-config-codestyle": "^1.2.0",
