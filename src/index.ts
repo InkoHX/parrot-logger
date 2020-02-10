@@ -78,7 +78,7 @@ const defaultOptions: DeepRequired<LoggerOptions> = {
   }
 }
 
-export default class Logger {
+export class Logger {
   public readonly options: DeepRequired<LoggerOptions>
 
   private readonly writeStream: WriteStream | null
