@@ -13,6 +13,8 @@
 ## Description
 
 - Logging to file.
+- Customizable colors.
+- Simple and easy.
 
 ## Install
 
@@ -58,19 +60,23 @@ const defaultOptions = {
     color: {
       INFO: {
         text: '#fff',
-        background: '#1565c0'
+        background: '#1565c0',
+        backgroundText: '#cccccc'
       },
       WARN: {
         text: '#ffb04c',
-        background: '#ff833a'
+        background: '#ff833a',
+        backgroundText: '#cccccc'
       },
       ERROR: {
         text: '#f44336',
-        background: '#f44336'
+        background: '#f44336',
+        backgroundText: '#cccccc'
       },
       DEBUG: {
         text: '#9e9e9e',
-        background: '#707070'
+        background: '#707070',
+        backgroundText: '#cccccc'
       }
     }
   },
