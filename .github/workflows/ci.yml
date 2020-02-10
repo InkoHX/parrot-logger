@@ -41,9 +41,9 @@ jobs:
         run: yarn run compile:test
 
   publish:
-    needs: [test]
+    needs: test
     runs-on: ubuntu-latest
-    if: github.event == 'release'
+    if: github.event == "release"
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js v12
@@ -60,7 +60,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-yarn-
       - name: Compile source code.
-        run: yarn --frozen-lockfile
+        run: |
+          yarn --frozen-lockfile
+          yarn run compile
       - name: Publish package.
         run: yarn publish
         env:
