@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "Console utility.",
   "main": "dist/index.js",
-  "repository": "https://github.com/InkoHX/typescript-template-yarn.git",
+  "repository": "https://github.com/InkoHX/parrot-logger.git",
   "author": "InkoHX <inkohx@gmail.com>",
   "license": "MIT",
   "scripts": {
