@@ -11,9 +11,6 @@ on:
       - "media/**"
   schedule:
     - cron: "0 0 1 1-12 *"
-  release:
-    types:
-      - created
 
 jobs:
   test:
@@ -39,31 +36,3 @@ jobs:
         run: yarn run lint
       - name: compile
         run: yarn run compile:test
-
-  publish:
-    needs: test
-    runs-on: ubuntu-latest
-    if: github.event == 'release'
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js v12
-        uses: actions/setup-node@v1
-        with:
-          node-version: 12.x
-      - name: Get yarn cache
-        id: yarn-cache
-        run: echo "::set-output name=dir::$(yarn cache dir)"
-      - uses: actions/cache@v1
-        with:
-          path: ${{ steps.yarn-cache.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-yarn-
-      - name: Compile source code.
-        run: |
-          yarn --frozen-lockfile
-          yarn run compile
-      - name: Publish package.
-        run: yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
