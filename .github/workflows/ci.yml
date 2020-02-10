@@ -43,7 +43,7 @@ jobs:
   publish:
     needs: test
     runs-on: ubuntu-latest
-    if: github.event == "release"
+    if: github.event == 'release'
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js v12
