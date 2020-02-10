@@ -11,19 +11,20 @@ export type LoggerType = 'INFO' | 'WARN' | 'ERROR' | 'DEBUG'
 
 export interface ColorOptions {
   background: string,
+  backgroundText: string,
   text: string
 }
 
 export interface ConsoleOptions {
   logging?: boolean,
-  type?: Record<LoggerType, boolean>,
-  color: Record<LoggerType, ColorOptions>
+  type?: Partial<Record<LoggerType, boolean>>,
+  color?: Partial<Record<LoggerType, Partial<ColorOptions>>>
 }
 
 export interface FileLogging {
   logging?: boolean,
   filePath?: string,
-  type?: Record<LoggerType, boolean>
+  type?: Partial<Record<LoggerType, boolean>>
 }
 
 export interface LoggerOptions {
@@ -45,19 +46,23 @@ const defaultOptions: DeepRequired<LoggerOptions> = {
     color: {
       INFO: {
         text: '#fff',
-        background: '#1565c0'
+        background: '#1565c0',
+        backgroundText: '#cccccc'
       },
       WARN: {
         text: '#ffb04c',
-        background: '#ff833a'
+        background: '#ff833a',
+        backgroundText: '#cccccc'
       },
       ERROR: {
         text: '#f44336',
-        background: '#f44336'
+        background: '#f44336',
+        backgroundText: '#cccccc'
       },
       DEBUG: {
         text: '#9e9e9e',
-        background: '#707070'
+        background: '#707070',
+        backgroundText: '#cccccc'
       }
     }
   },
@@ -136,6 +141,6 @@ export default class Logger {
   }
 
   private formatData (timestamp: string, data: string, option: ColorOptions, noColor = false): string {
-    return `${chalk.bgHex(option.background)(`[${timestamp}]`)} ${noColor ? data : chalk.hex(option.text)(data)}`
+    return `${chalk.bgHex(option.background).hex(option.backgroundText)(`[${timestamp}]`)} ${noColor ? data : chalk.hex(option.text)(data)}`
   }
 }
