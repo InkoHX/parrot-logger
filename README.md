@@ -10,6 +10,11 @@
 
 </div>
 
+## Screenshots
+
+![Console](https://github.com/InkoHX/parrot-logger/blob/master/media/console.png?raw=true)
+![log file](https://github.com/InkoHX/parrot-logger/blob/master/media/log-file.png?raw=true)
+
 ## Description
 
 Lightweight logger module.
@@ -50,49 +55,4 @@ logger
 
 ## Default Logger Options
 
-```ts
-const defaultOptions = {
-  timestamp: 'YYYY/MM/DD HH:mm:ss:SSS',
-  console: {
-    logging: true,
-    type: {
-      INFO: true,
-      WARN: true,
-      ERROR: true,
-      DEBUG: false
-    },
-    color: {
-      INFO: {
-        text: '#fff',
-        background: '#1565c0',
-        backgroundText: '#cccccc'
-      },
-      WARN: {
-        text: '#ffb04c',
-        background: '#ff833a',
-        backgroundText: '#cccccc'
-      },
-      ERROR: {
-        text: '#f44336',
-        background: '#f44336',
-        backgroundText: '#cccccc'
-      },
-      DEBUG: {
-        text: '#9e9e9e',
-        background: '#707070',
-        backgroundText: '#cccccc'
-      }
-    }
-  },
-  file: {
-    logging: false,
-    filePath: path.join(path.resolve(process.cwd()), 'program.log'),
-    type: {
-      INFO: true,
-      WARN: true,
-      ERROR: true,
-      DEBUG: true
-    }
-  }
-}
-```
+Look at [this](https://github.com/InkoHX/parrot-logger/blob/master/src/index.ts#L36-#L79)
