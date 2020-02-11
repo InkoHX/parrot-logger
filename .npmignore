@@ -1,7 +1,7 @@
 .eslintrc.json
 tsconfig.json
 yarn.lock
-.github/**/*
+.github
+src
+media
 *.log
-src/*
-media/*
