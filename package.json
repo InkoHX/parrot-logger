@@ -1,10 +1,31 @@
 {
   "name": "parrot-logger",
   "version": "0.0.2",
-  "description": "Console utility.",
+  "description": "Lightweight logger module.",
   "main": "dist/index.js",
-  "repository": "https://github.com/InkoHX/parrot-logger.git",
-  "author": "InkoHX <inkohx@gmail.com>",
+  "homepage": "https://github.com/InkoHX/parrot-logger#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/InkoHX/parrot-logger.git"
+  },
+  "author": {
+    "name": "InkoHX",
+    "email": "inkohx@gmail.com",
+    "url": "https://about.inkohx.me"
+  },
+  "bugs": {
+    "url": "https://github.com/InkoHX/parrot-logger/issues"
+  },
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/inkohx"
+  },
+  "keywords": [
+    "logger",
+    "color",
+    "logging",
+    "console"
+  ],
   "license": "MIT",
   "scripts": {
     "lint": "eslint --ext .ts --ignore-path .gitignore ./src",
