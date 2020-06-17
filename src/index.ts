@@ -81,12 +81,13 @@ const defaultOptions: DeepRequired<LoggerOptions> = {
 export class Logger {
   public readonly options: DeepRequired<LoggerOptions>
 
-  private readonly writeStream: WriteStream | null
+  // eslint-disable-next-line @typescript-eslint/explicit-member-accessibility
+  readonly #writeStream: WriteStream | null
 
   public constructor (options: LoggerOptions = {}) {
     this.options = mergeObject(defaultOptions, options) as DeepRequired<LoggerOptions>
 
-    this.writeStream = this.options.file.logging
+    this.#writeStream = this.options.file.logging
       ? createWriteStream(this.options.file.filePath, { flags: 'a' })
       : null
   }
@@ -114,8 +115,8 @@ export class Logger {
       console.log(this.formatData(timestamp, this.flatten(data), this.options.console.color[type], this.isObject(data)))
     }
 
-    if (this.options.file.logging && this.options.file.type[type] && this.writeStream) {
-      this.writeStream.write(`[${timestamp}] [${type}] ${this.flatten(data, false) + EOL || '\n'}`, error => {
+    if (this.options.file.logging && this.options.file.type[type] && this.#writeStream) {
+      this.#writeStream.write(`[${timestamp}] [${type}] ${this.flatten(data, false) + EOL || '\n'}`, error => {
         if (error) console.error(error)
       })
     }
