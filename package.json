@@ -1,6 +1,6 @@
 {
   "name": "parrot-logger",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Lightweight logger module.",
   "main": "dist/index.js",
   "homepage": "https://github.com/InkoHX/parrot-logger#readme",
