@@ -36,7 +36,7 @@
     "watch:test": "tsc -w -p . --noEmit"
   },
   "dependencies": {
-    "chalk": "^3.0.0",
+    "chalk": "^4.1.0",
     "dayjs": "^1.8.20",
     "deepmerge": "^4.2.2",
     "utility-types": "^3.10.0"
