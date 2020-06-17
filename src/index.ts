@@ -34,7 +34,7 @@ export interface LoggerOptions {
 }
 
 const defaultOptions: DeepRequired<LoggerOptions> = {
-  timestamp: 'YYYY/MM/DD HH:mm:ss:SSS',
+  timestamp: 'YYYY/MM/DD HH:mm:ss.SSS',
   console: {
     logging: true,
     type: {
