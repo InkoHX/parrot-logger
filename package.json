@@ -43,7 +43,7 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "@inkohx/eslint-config-codestyle": "^1.2.0",
+    "@inkohx/eslint-config-codestyle": "^2.1.2",
     "@types/node": "^14.0.13",
     "@typescript-eslint/eslint-plugin": "^2.19.0",
     "@typescript-eslint/parser": "^2.19.0",
