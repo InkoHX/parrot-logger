@@ -18,10 +18,10 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@inkohx/eslint-config-codestyle@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@inkohx/eslint-config-codestyle/-/eslint-config-codestyle-1.2.0.tgz#b585b88d86f771e96eb0b2eb6bf38109cdadc320"
-  integrity sha512-5DLnditLqzcPX0KUQvwamqVnkGfpC/X/Iy6tg4tRO17C3trnDA7sd7VZMCKzgnxU9Kl6oozOFRmvB2hel2mnBg==
+"@inkohx/eslint-config-codestyle@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@inkohx/eslint-config-codestyle/-/eslint-config-codestyle-3.0.3.tgz#e2bd9502d69f2e200e179dcf6e0cb11cb85a603b"
+  integrity sha512-zhczs/bM7ZMTiZGMYqeSTsP4b8/8Egg1FnFUVhsur6u0zdG92Xhqs9QYipt0vibd5vDY0I/zXn6HbNP5xk6WmA==
 
 "@types/color-name@^1.1.1":
   version "1.1.1"
